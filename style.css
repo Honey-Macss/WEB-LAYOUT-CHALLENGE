@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    min-height: 100vh;
+}
+
+main{
+    height: inherit;
+    padding: 1.5rem 5rem 1.5rem 5rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-areas: 
+    'one one two'
+    'one one three'
+    'four six six'
+    'five six six'
+    'seven seven eight'
+    'seven seven nine'
+    'ten twelve twelve'
+    'eleven twelve twelve'
+    'thirteen thirteen fourteen'
+    'thirteen thirteen fifteen';
+}
+
+main > *{
+    background-color: #cccccc;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-size: 2rem;
+
+}
+
+.secone{
+    grid-area: one;
+    height: 15rem;
+}
+
+.secsix{
+    grid-area: six;
+    height: 15rem;
+}
+
+.secseven{
+    grid-area: seven;
+    height: 15rem;
+
+}
+
+.sectwelve{
+    grid-area: twelve;
+    height: 15rem;
+
+}
+
+.secthirteen{
+    grid-area: thirteen;
+    height: 15rem;
+
+}
+
+@media only screen and (min-width:1024px) {
+    main{
+        height: 100vh;
+        padding: 2rem 9.5rem 2rem 9.5rem;
+        gap: 2rem;
+        grid-template-areas: 
+        'one one two three'
+        'one one four five'
+        'six seven ten ten'
+        'eight nine ten ten'
+        'eleven eleven twelve thirteen'
+        'eleven eleven fourteen fifteen';
+    }
+
+    .secten{
+        grid-area: ten;
+        height: 16rem;
+    }
+
+    .seceleven{
+        grid-area: eleven;
+        height: 16rem;
+    }
+
+    .secsix{
+        grid-area: six;
+        height: unset;
+    }
+    
+    .secseven{
+        grid-area: seven;
+        height: unset;
+    
+    }
+    
+    .sectwelve{
+        grid-area: twelve;
+        height: unset;
+    
+    }
+    
+    .secthirteen{
+        grid-area: thirteen;
+        height: unset;
+    
+    }
+}
+
